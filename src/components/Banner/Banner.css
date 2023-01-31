@@ -1,0 +1,33 @@
+
+.banner {
+  background-image: url(./banner.jpg);
+  max-height: 100vh;
+  width: 100%;
+}
+.banner-content {
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  height: 400;
+  justify-content: space-around;
+}
+.tag-line {
+    display: flex;
+    height: 50%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.heading {
+  font-weight: bold;
+  letter-spacing:normal;
+  font-size: 4rem;
+  padding: 30px 30px;
+}
+.subtitle {
+  font-size: 1rem;
+  color: grey;
+  text-transform: capitalize;
+  font-family: "Montserrat", sans-serif;
+}
