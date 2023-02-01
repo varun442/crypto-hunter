@@ -26,10 +26,11 @@ const Header = () => {
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
-        <AppBar color="transparent" position="static">
+        <AppBar color="transparent" position="sticky">
           <Container>
-            <Toolbar>
+            <Toolbar className="navbar">
               <Typography className="title"  ><Link to="/"> Crypto Hunter</Link> </Typography>
+              <Typography className="news"><Link to="/news"> News</Link></Typography>
               <Select
                 variant="outlined"
                 style={{ width: 100, height: 40, marginRight: 15 }}

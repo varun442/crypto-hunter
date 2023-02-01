@@ -1,6 +1,5 @@
-
 .banner {
-  background-image: url(./banner.jpg);
+  background-image: url("https://res.cloudinary.com/practicaldev/image/fetch/s--FNm6M500--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/80ywr4mbxogncowbkjxc.gif");
   max-height: 100vh;
   width: 100%;
 }
@@ -12,16 +11,16 @@
   justify-content: space-around;
 }
 .tag-line {
-    display: flex;
-    height: 50%;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  height: 50%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .heading {
   font-weight: bold;
-  letter-spacing:normal;
+  letter-spacing: normal;
   font-size: 4rem;
   padding: 30px 30px;
 }

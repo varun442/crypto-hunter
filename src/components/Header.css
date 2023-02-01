@@ -1,5 +1,8 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
 .title {
-  flex: 1;
   color: gold;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
