@@ -8,7 +8,7 @@ import CoinInfo from "./CoinInfo";
 import { SingleCoin } from "../components/Config/api";
 import { CryptoState } from "../CryptContext";
 import { numberWithCommas } from "../components/CoinsTable";
-import './Coinpage.css'
+import "./Coinpage.css";
 const Coinpage = () => {
   const { id } = useParams();
   const [coin, setCoin] = useState();
@@ -25,10 +25,6 @@ const Coinpage = () => {
     fetchCoin();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  
-
-  
 
   if (!coin) return <LinearProgress style={{ backgroundColor: "gold" }} />;
 
@@ -102,7 +98,9 @@ const Coinpage = () => {
           </span>
         </div>
       </div>
-      <CoinInfo coin={coin} />
+      <div className="coin-info">
+        <CoinInfo coin={coin} />
+      </div>
     </div>
   );
 };

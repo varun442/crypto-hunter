@@ -10,34 +10,48 @@
   margin-top: 25px;
   border-right: 2px solid grey;
 }
- .heading{
-  font-weight: bold;
+.heading {
+  font-weight: bold !important;
   margin-bottom: 20;
- }
+}
 
-.description{
+.description {
   width: 100%;
   padding: 25px;
   padding-bottom: 15px;
   padding-top: 0;
   text-align: justify;
 }
-.market-data{
-  align-self:flex-start;
+.market-data {
+  align-self: flex-start;
   padding: 25px;
   padding-top: 10px;
   width: 100%;
 }
-@media (max-width:1200px) {
-    .side-bar{
-        width: 100%;
-    }
+
+@media (max-width: 959px) {
+  .marketData {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
-h5{
+@media (max-width: 767px) {
+  .marketData {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .marketData {
+    align-items: start;
+  }
+}
+h5 {
   align-items: center;
   justify-content: center;
 }
-.css-ag7rrr-MuiTypography-root{
+.css-ag7rrr-MuiTypography-root {
   padding-top: 4px;
 }
