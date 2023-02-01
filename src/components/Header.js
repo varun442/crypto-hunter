@@ -10,6 +10,7 @@ import {
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import "./Header.css";
 import { CryptoState } from "../CryptContext";
+import { Link } from "react-router-dom";
 const Header = () => {
   const darkTheme = createTheme({
     palette: {
@@ -28,7 +29,7 @@ const Header = () => {
         <AppBar color="transparent" position="static">
           <Container>
             <Toolbar>
-              <Typography className="title">Crypto Hunter</Typography>
+              <Typography className="title"  ><Link to="/"> Crypto Hunter</Link> </Typography>
               <Select
                 variant="outlined"
                 style={{ width: 100, height: 40, marginRight: 15 }}

@@ -16,7 +16,7 @@ const CoinInfo = ({ coin }) => {
     const data = await response.json();
     setHistoricalData(data.prices);
   };
-  console.log(historicalData);
+  // console.log(historicalData);
   useEffect(() => {
     fetchData();
   }, [currency, days]);

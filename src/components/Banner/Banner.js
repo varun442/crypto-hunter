@@ -1,7 +1,6 @@
 import React from "react";
 import "./Banner.css";
 import { Container } from "@mui/material";
-
 import Carousel from "./Carousel";
 const Banner = () => {
   return (

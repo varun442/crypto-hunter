@@ -33,7 +33,7 @@ const CoinsTable = () => {
     setCoinList(data);
     setloading(false);
   };
-  console.log(coinList);
+  // console.log(coinList);
 
   useEffect(() => {
     fetchCoinList();
@@ -87,7 +87,7 @@ const CoinsTable = () => {
                             fontFamily: "Montserrat",
                           }}
                           key={head}
-                          align={head === "Coin" ? "" : "right"}
+                          align={head === "Coin" ? "left" : "right"}
                         >
                           {head}
                         </TableCell>
@@ -104,7 +104,7 @@ const CoinsTable = () => {
                       return (
                         <TableRow
                           onClick={() => {
-                            navigate(`coin/${row.id}`);
+                            navigate(`coins/${row.id}`);
                           }}
                           className="row"
                           key={row.name}
@@ -171,15 +171,16 @@ const CoinsTable = () => {
           )}
         </TableContainer>
 
-        <Pagination className="pagination"
+        <Pagination
+          className="pagination"
           style={{
             padding: 20,
             width: "100%",
             display: "flex",
             justifyContent: "center",
           }}
-          count={(handleSearch()?.length / 10).toFixed(0)}
-          onChange={(_, value)=>{
+          count={parseInt((handleSearch()?.length / 10).toFixed(0), 10)}
+          onChange={(_, value) => {
             setPage(value);
             window.scroll(0, 450);
           }}

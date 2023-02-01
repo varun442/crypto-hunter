@@ -2,6 +2,13 @@
   display: flex;
 }
 
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .side-bar {
   width: 30%;
   display: flex;
@@ -9,6 +16,12 @@
   align-items: center;
   margin-top: 25px;
   border-right: 2px solid grey;
+}
+@media only screen and (max-width: 768px){
+  .side-bar{
+    width: 100%;
+    align-items: center;
+  }
 }
 .heading {
   font-weight: bold !important;
@@ -28,26 +41,26 @@
   padding-top: 10px;
   width: 100%;
 }
-
-@media (max-width: 959px) {
+ 
+@media only screen and (max-width: 959px) {
   .marketData {
     display: flex;
     justify-content: space-around;
   }
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .marketData {
     flex-direction: column;
     align-items: center;
   }
 }
 
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .marketData {
     align-items: start;
   }
-}
+} 
 h5 {
   align-items: center;
   justify-content: center;
