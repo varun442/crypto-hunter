@@ -4,6 +4,7 @@ import { CryptoState } from "../CryptContext";
 import { CircularProgress, createTheme, ThemeProvider } from "@mui/material";
 import "./CoinInfo.css";
 import { Line } from "react-chartjs-2";
+// eslint-disable-next-line
 import Chart from "chart.js/auto";
 import { chartDays } from "../components/Config/data";
 import SelectButton from "./SelectButton";
@@ -16,9 +17,9 @@ const CoinInfo = ({ coin }) => {
     const data = await response.json();
     setHistoricalData(data.prices);
   };
-  // console.log(historicalData);
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line
   }, [currency, days]);
   const darkTheme = createTheme({
     palette: {
