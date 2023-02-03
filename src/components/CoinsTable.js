@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { CoinList } from "./Config/api";
 import { CryptoState } from "../CryptContext";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import {
@@ -21,18 +20,11 @@ export function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 const CoinsTable = () => {
-  const [coinList, setCoinList] = useState([]);
-  const [loading, setloading] = useState(false);
+  
   const [search, setSearch] = useState("");
-  const { currency, symbol } = CryptoState();
+  const { currency, symbol, coinList , loading, fetchCoinList } = CryptoState();
   const [page, setPage] = useState(1);
-  const fetchCoinList = async () => {
-    setloading(true);
-    const response = await fetch(CoinList(currency));
-    const data = await response.json();
-    setCoinList(data);
-    setloading(false);
-  };
+  
   // console.log(coinList);
 
   useEffect(() => {

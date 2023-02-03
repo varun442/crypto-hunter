@@ -1,0 +1,11 @@
+.modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.paper {
+  width: 400px;
+  background-color: #14161A;
+  color: "white";
+  border-radius: 10px;
+}
