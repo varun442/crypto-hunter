@@ -36,5 +36,9 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  color: gold;
+  color: gold !important;
+}
+
+.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root {
+  color: gold !important;
 }

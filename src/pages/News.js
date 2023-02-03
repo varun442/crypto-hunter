@@ -155,6 +155,7 @@ const News = () => {
           width: "100%",
           display: "flex",
           justifyContent: "center",
+          fontColor:"gold"
         }}
         count={parseInt((items?.length / 10).toFixed(0), 10)}
         onChange={(_, value) => {
