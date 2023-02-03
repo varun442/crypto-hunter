@@ -12,4 +12,3 @@ export const TrendingCoins = (currency) =>
 
 
 // const apiKey = "a7fd7c4feb1e439484afb36e8849b3c0"
-export const baseURL = `https://newsapi.org/v2/everything?q=cryptocurrency&apiKey=${process.env.REACT_APP_API_KEY}`

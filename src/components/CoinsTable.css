@@ -15,7 +15,7 @@
   to {
     width: 100%;
   }
-} 
+}
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
@@ -24,9 +24,9 @@
     border-color: transparent;
   }
   50% {
-    border-color: #EDB90E;
+    border-color: #edb90e;
   }
-} 
+}
 .row {
   background-color: #16171a;
   cursor: pointer;

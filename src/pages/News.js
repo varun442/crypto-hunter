@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./News.css";
-import { baseURL } from "../components/Config/api";
 import ShareIcon from "@mui/icons-material/Share";
 import _ from "underscore";
 import {
@@ -20,6 +19,8 @@ const News = () => {
   const [items, setItems] = useState([]);
   const [activeButton, setActiveButton] = useState("latest");
   const [page, setPage] = useState(1);
+  const baseURL = `https://newsapi.org/v2/everything?q=cryptocurrency&apiKey=${process.env.REACT_APP_API_KEY}`;
+
   const fetchNews = async () => {
     const response = await fetch(baseURL);
     const data = await response.json();
@@ -28,7 +29,9 @@ const News = () => {
   };
 
   useEffect(() => {
+    // eslint-disable-next-line
     fetchNews();
+    // eslint-disable-next-line
   }, []);
 
   const latest = _.sortBy(news.articles, "publishedAt").reverse();
@@ -89,7 +92,7 @@ const News = () => {
         {items.slice((page - 1) * 6, (page - 1) * 6 + 6).map((item) => {
           return (
             <div className="grid-item">
-              <Card sx={{ width: 370, height: 450 }}>
+              <Card sx={{ width: 370, height: 450 }} key={item}>
                 <div className="head">
                   <a
                     style={{ color: "black" }}
@@ -146,7 +149,7 @@ const News = () => {
         })}
       </div>
       <Pagination
-        className="pagination"
+        className="news-pagination"
         style={{
           padding: 20,
           width: "100%",
@@ -158,6 +161,7 @@ const News = () => {
           setPage(value);
           window.scroll(0, 450);
         }}
+        
       />
     </div>
   );
