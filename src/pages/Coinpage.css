@@ -20,7 +20,6 @@
 @media only screen and (max-width: 768px){
   .side-bar{
     width: 100%;
-    align-items: center;
   }
 }
 .heading {
@@ -45,22 +44,17 @@
 @media only screen and (max-width: 959px) {
   .marketData {
     display: flex;
-    justify-content: space-around;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .marketData {
     flex-direction: column;
     align-items: center;
   }
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 767px) {
   .marketData {
     align-items: start;
   }
-} 
+}
+
 h5 {
   align-items: center;
   justify-content: center;

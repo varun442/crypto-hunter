@@ -75,14 +75,20 @@ const News = () => {
       <div className="sort-buttons">
         <Button
           className="btn btn-toggle1"
-          style={{ backgroundColor: activeButton === "latest" ? "gold" : " " }}
+          style={{
+            backgroundColor: activeButton === "latest" ? "gold" : " ",
+            color: activeButton === "latest" ? "black" : "gold ",
+          }}
           onClick={() => sortNews("latest")}
         >
           Latest News
         </Button>
         <Button
           className="btn btn-toggle2"
-          style={{ backgroundColor: activeButton === "oldest" ? "gold" : " " }}
+          style={{
+            backgroundColor: activeButton === "oldest" ? "gold" : " ",
+            color: activeButton === "oldest" ? "black" : "gold ",
+          }}
           onClick={() => sortNews("oldest")}
         >
           Oldest News
@@ -155,14 +161,13 @@ const News = () => {
           width: "100%",
           display: "flex",
           justifyContent: "center",
-          fontColor:"gold"
+          fontColor: "gold",
         }}
         count={parseInt((items?.length / 10).toFixed(0), 10)}
         onChange={(_, value) => {
           setPage(value);
           window.scroll(0, 450);
         }}
-        
       />
     </div>
   );

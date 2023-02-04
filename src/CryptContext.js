@@ -1,7 +1,9 @@
 import { onAuthStateChanged } from "firebase/auth";
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { CoinList } from "./components/Config/api";
-import { auth } from "./firebase";
+import { auth, db } from "./firebase";
+import { doc, onSnapshot } from "@firebase/firestore";
+
 const Crypto = createContext();
 const CryptContext = ({ children }) => {
   const [currency, setCurrency] = useState("INR");
@@ -14,13 +16,13 @@ const CryptContext = ({ children }) => {
     message: "",
     type: "success",
   });
-
-  useEffect(()=>{
-    onAuthStateChanged(auth, user =>{
-      if(user) setUser(user);
+  const [watchlist, setWatchlist] = useState([]);
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) setUser(user);
       else setUser(null);
-    })
-  })
+    });
+  });
 
   const fetchCoinList = async () => {
     setloading(true);
@@ -29,11 +31,29 @@ const CryptContext = ({ children }) => {
     setCoinList(data);
     setloading(false);
   };
+
+  useEffect(() => {
+    if (user) {
+      const coinRef = doc(db, "watchlist", user.uid);
+      var unsubscribe = onSnapshot(coinRef, (coin) => {
+        if (coin.exists()) {
+          console.log(coin.data().coins)
+          setWatchlist(coin.data().coins);
+        } else {
+          console.log("No Items in Watchlist");
+        }
+      });
+      return () => {
+        unsubscribe();
+      };
+    }
+  }, [user]);
+
   useEffect(() => {
     if (currency === "INR") setSymbol("₹");
     else if (currency === "USD") setSymbol("$");
   }, [currency]);
-
+  console.log(user);
   return (
     <Crypto.Provider
       value={{
@@ -45,7 +65,8 @@ const CryptContext = ({ children }) => {
         fetchCoinList,
         alert,
         setAlert,
-        user
+        user,
+        watchlist,
       }}
     >
       {children}
