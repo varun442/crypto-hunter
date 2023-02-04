@@ -7,7 +7,7 @@ import Login from "./Login";
 import SignUp from "./SignUp";
 import "./AuthModal.css";
 import GoogleButton from "react-google-button";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 import { CryptoState } from "../../CryptContext";
 import { auth } from "../../firebase";
 export default function AuthModal() {
@@ -24,7 +24,7 @@ export default function AuthModal() {
   const googleProvider = new GoogleAuthProvider();
 
   const signInWithGoogle = () => {
-    signInWithPopup(auth, googleProvider)
+    signInWithRedirect(auth, googleProvider)
       .then((res) => {
         setAlert({
           open: true,
