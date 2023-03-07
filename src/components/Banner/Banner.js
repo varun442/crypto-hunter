@@ -7,7 +7,7 @@ const Banner = () => {
     <div className="banner">
       <Container className="banner-content">
         <div className="tag-line">
-          <h2 className="heading">Crypto Hunter</h2>
+          <h2 className="heading">Kriptoo</h2>
           <p className="subtitle">
             Get all Info Regarding Your Favourite Crypto Currency
           </p>
