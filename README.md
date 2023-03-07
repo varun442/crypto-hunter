@@ -25,6 +25,5 @@ Explore more about Crypto Hunter [here](https://kriptoo.netlify.app/)
 - Currently working on Portfolio management and tracking, Real-time updates for prices and ranking.
 
 ## Find app snippets here  
-[Mobile](https://github.com/varun442/moviebase/tree/master/src/assets/mobile)
 
 [Desktop](https://github.com/varun442/moviebase/tree/master/src/assets/desktop)
