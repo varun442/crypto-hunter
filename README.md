@@ -2,7 +2,7 @@
 
 ## Description
 
-CryptoWeb is a web application that allows users to browse various crypto coins, view their ranking, follow up with latest news and add them to their watchlist. The app provides a user-friendly interface for users to keep track of their favorite crypto coins and watch their charts for different timelines. 
+Kriptoo is a web application that allows users to browse various crypto coins, view their ranking, follow up with latest news and add them to their watchlist. The app provides a user-friendly interface for users to keep track of their favorite crypto coins and watch their charts for different timelines. 
 
 The app uses Firebase Authentication for secure login and to ensure the privacy of the users' data.
 
