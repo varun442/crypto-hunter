@@ -6,7 +6,7 @@ Kriptoo is a web application that allows users to browse various crypto coins, v
 
 The app uses Firebase Authentication for secure login and to ensure the privacy of the users' data.
 
-Explore more about Crypto Hunter [here](https://kriptoo.netlify.app/)
+Explore more about Kriptoo [here](https://kriptoo.netlify.app/)
 
 ### Tech Stack Used
 - React.js
