@@ -26,4 +26,4 @@ Explore more about Crypto Hunter [here](https://kriptoo.netlify.app/)
 
 ## Find app snippets here  
 
-[Desktop](https://github.com/varun442/moviebase/tree/master/src/assets/desktop)
+[Desktop](https://github.com/varun442/crypto-hunter/tree/main/src/assets)
