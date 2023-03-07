@@ -22,6 +22,7 @@ Explore more about Crypto Hunter [here](https://kriptoo.netlify.app/)
 - Login using Firebase Authentication
 - Watch charts for different timelines
 - Followup with latest news in Crypto (API ony supports in localhost fin snippets below)
+- Currently working on Portfolio management and tracking, Real-time updates for prices and ranking.
 
 ## Find app snippets here  
 [Mobile](https://github.com/varun442/moviebase/tree/master/src/assets/mobile)
